@@ -1,0 +1,4 @@
+digital daily planner
+class,section,subject,homework,estimated timer - teacher inputs
+each day to be divided into hour slots -
+each hour activites - limits 2 if excess alert popups 

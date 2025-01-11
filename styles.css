@@ -1,0 +1,273 @@
+/* General Styling */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+}
+
+/* Navbar Styling */
+.navbar {
+  padding: 1.25em;
+}
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  color: blue;
+  border-bottom: solid;
+}
+.overview-link {
+  color: blue;
+  text-decoration: underline;
+}
+
+.navbar .nav-link:hover {
+  color: black;
+}
+
+/* Section Headings */
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+/* Overview Section */
+#overview {
+  margin-top: 5em;
+}
+
+#overview h1 {
+  font-size: 3em;
+  margin-bottom: 1em;
+  font-size: 52px;
+  line-height: 64px;
+  font-weight: 700;
+}
+
+.overview-container {
+  background-color: rgb(147, 236, 229);
+  border-radius: 10px;
+  padding: 3em 2em;
+  max-width: 90%;
+}
+
+.overview-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3em 0;
+}
+
+.one-half {
+  width: 100%;
+  height: 100%;
+}
+
+.one-half h1 {
+  text-align: center;
+}
+.one-half:has(img) {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.teacheingimage {
+  width: 80%;
+  border-radius: 2em;
+  margin: 2em 0;
+}
+
+.text-blue {
+  color: blue;
+}
+/* Features Section */
+
+.feature-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5em 0;
+}
+/* #features img {
+    max-height: 300px;
+    object-fit: cover;
+} */
+
+.featureitem {
+  margin: 0 2em;
+  justify-content: space-evenly;
+}
+
+.featureitem .image {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+}
+
+.description {
+  text-align: center;
+  width: 70%;
+}
+
+.description h3 {
+  font-weight: 700;
+  margin: 1em 0 1em 0;
+}
+
+.description .custom-list {
+  list-style: none; /* Remove default list markers */
+  padding: 0; /* Remove default padding */
+  margin: 0 2em; /* Remove default margin */
+  text-align: left;
+}
+.description .custom-list li {
+  display: flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align items */
+  justify-content: start; /* Center-align text */
+  gap: 8px; /* Add space between tick and text */
+  margin: 0.5em 0;
+}
+.description .custom-list li::before {
+  content: "✔"; /* Unicode or emoji for the tick mark */
+  color: #4caf50; /* Set the color of the tick mark */
+  font-size: 1.2rem; /* Adjust the size of the marker */
+  margin: 0 0.5em 0 0;
+}
+
+/* Carousel Styling */
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.carousel-description {
+  flex: 1;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: darkgrey;
+  border-radius: 1em;
+}
+
+.carousel-description h5 {
+  font-weight: 700;
+  margin: 1em 0 1em 0;
+  text-align: center;
+}
+.carousel-box {
+  display: flex;
+  flex-direction: column;
+  gap: 2em 0;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: 0 25%;
+}
+
+.carousel-image img {
+  flex: 1;
+  border-radius: 1em;
+  max-width: 20em;
+}
+
+/* Footer Styling */
+footer {
+  color: darkgrey;
+  font-size: 0.9rem;
+  border-top: solid darkgray;
+  border-width: 1px;
+}
+
+footer a {
+  color: #bbb;
+  margin: 0 0.5rem;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+/* img{
+    width: 20em;
+    height: 20em;
+} */
+
+.custom-bg {
+  background-color: rgb(147, 236, 229); /* Light blue background */
+  padding: 20px; /* Padding inside the description box */
+  border-radius: 8px; /* Rounded corners */
+}
+.equal-height {
+  display: flex;
+}
+@media (min-width: 990px) {
+  .one-half {
+    width: 45%;
+    height: 45%;
+  }
+  .one-half h1 {
+    text-align: left;
+  }
+  .overview-box {
+    flex-direction: row;
+    row-gap: 0 0;
+    justify-content: space-between;
+  }
+  .teacheingimage {
+    width: 100%;
+    height: 100%;
+    border-radius: 2em;
+    margin: 2em 0;
+  }
+  .equal-height {
+    /* Side-by-side for larger screens */
+    align-items: stretch; /* Ensure equal height */
+    /* flex: 1; */
+  }
+  .description {
+    display: flex; /* Enables flex layout inside the description box */
+    flex-direction: column; /* Ensures content inside the description box is stacked vertically */
+    justify-content: center; /* Centers the content vertically if desired */
+    flex: 1; /* Allows the description to take equal height as the image */
+  }
+  .featureitem {
+    display: flex; /* Ensures the child elements are aligned properly */
+    align-items: stretch !important;
+  }
+  .featureitem .image {
+    /* width: 35%; */
+    flex: 1;
+  }
+  .image img {
+    height: 100%; /* Ensures the image fills its parent container */
+    object-fit: cover; /* Ensures the image retains its aspect ratio */
+  }
+  .carousel-box {
+    display: flex;
+    flex-direction: row;
+    gap: 2em 0;
+    justify-content: space-evenly;
+    align-items: stretch;
+    width: 100%;
+    margin: 0;
+  }
+  .carousel-image {
+    flex: 1;
+  }
+  .carousel-image img {
+    flex: 1;
+    border-radius: 1em;
+    max-width: 25em;
+  }
+}
