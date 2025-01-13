@@ -20,7 +20,6 @@ body {
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link.show {
   color: blue;
-  border-bottom: solid;
 }
 .overview-link {
   color: blue;
@@ -34,7 +33,8 @@ body {
 /* Section Headings */
 h2 {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
+  padding: 0 1em;
   margin-bottom: 1rem;
   color: black;
 }
@@ -94,7 +94,7 @@ h2 {
 .feature-container {
   display: flex;
   flex-direction: column;
-  gap: 5em 0;
+  gap: 3em 0;
 }
 /* #features img {
     max-height: 300px;
@@ -104,17 +104,19 @@ h2 {
 .featureitem {
   margin: 0 2em;
   justify-content: space-evenly;
+  gap:3em 0;
 }
 
 .featureitem .image {
-  width: 70%;
   display: flex;
   justify-content: center;
 }
 
+.featureitem .image  img{
+    border-radius: 20% 20%;
+}
 .description {
   text-align: center;
-  width: 70%;
 }
 
 .description h3 {
@@ -125,7 +127,7 @@ h2 {
 .description .custom-list {
   list-style: none; /* Remove default list markers */
   padding: 0; /* Remove default padding */
-  margin: 0 2em; /* Remove default margin */
+  margin: 0; /* Remove default margin */
   text-align: left;
 }
 .description .custom-list li {
@@ -179,6 +181,30 @@ h2 {
   border-radius: 1em;
   max-width: 20em;
 }
+
+.carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    width: 3rem; /* Increase icon size */
+    height: 3rem; /* Increase icon size */
+    background-color: rgba(0, 0, 0, 1); /* Add a background for better visibility */
+  }
+
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    background-color: rgba(255, 255, 255, 1); /* Lighter background on hover */
+    border-color: black; /* Change border color on hover */
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 5%; /* Increase the clickable area */
+  }
+
+  .carousel-control-prev-icon::before,
+  .carousel-control-next-icon::before {
+    font-size: 1.5rem; /* Adjust arrow size */
+    color: black; /* Change arrow color */
+  }
 
 /* Footer Styling */
 footer {
